@@ -47,6 +47,7 @@ const VerticalSlider = () => {
             displayNone(buttonArrRight);
             cursorNone();
             movePos();
+            //a
           }
        
     }
