@@ -5,7 +5,7 @@ import superman from './img/superman.jpg'
 import spiderman from './img/spiderman.jpg'
 import { ArrowBackIosNew, ArrowForwardIos, PlayArrow, Add, ThumbUp, ThumbDown } from '@mui/icons-material'
 import { useRef, useState } from 'react'
-import trailer from './videos/vid.mp4'
+import trailer from '../../videos/vid.mp4'
 
 
 const VerticalSlider = () => {
@@ -47,7 +47,7 @@ const VerticalSlider = () => {
             displayNone(buttonArrRight);
             cursorNone();
             movePos();
-            //a
+            
           }
        
     }

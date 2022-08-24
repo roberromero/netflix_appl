@@ -1,10 +1,10 @@
 import React from 'react'
 import './Watch.scss'
-import trailer from './videos/vid.mp4'
+import trailer from '../../videos/vid.mp4'
 import { ArrowBack } from '@mui/icons-material'
 
 const Watch = () => {
-    const vid = "/https://www.youtube.com/watch?v=N3AkSS5hXMA"
+    
   return (
     <div className='watch'>
       <div className="home">
