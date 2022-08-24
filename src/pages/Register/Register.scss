@@ -36,6 +36,10 @@
                 height: 45px;
                 border: none;
                 padding-left: 10px;
+               
+            }
+            #in_email:focus{
+               outline: none;
             }
             #in_sub{
                 height: 45px;
@@ -46,6 +50,7 @@
                 color: white;
                 padding: 0 10px;
                 font-weight: 700;
+                cursor: pointer;
             }
         }
     }
