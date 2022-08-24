@@ -1,0 +1,18 @@
+.watch{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .home{
+        color: white;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        cursor: pointer;
+    }
+    video{
+        width: 70%;
+    }
+}

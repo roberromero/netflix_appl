@@ -1,0 +1,77 @@
+nav{
+   display: flex;
+   justify-content: space-between;
+    width: 100%;
+    color: white;
+    position: fixed;
+    z-index: 999;
+    opacity: .6;
+    background-color: rgb(0, 0, 0);
+    //"moveScroll" is a class for nav
+&.moveScroll{
+    opacity: 1;
+}
+    .left{
+        display: flex;
+        img{
+            width: 95px;
+            margin-left: 25px;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            li{
+                padding-left: 23px;
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+    .right{
+        &:last-child{
+            padding-right: 25px;
+        }
+        display: flex;
+        align-items: center;
+        img{
+            width: 35px;
+            border-radius: 5px;
+        }
+        .right_item{
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        .drop_menu_act{
+            &:hover{
+                .drop_menu{
+                    display: flex;
+                }   
+            }
+            .drop_menu{
+            width: 85px;
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            align-items: center;
+            padding: 10px 0;
+            border-radius: 3px;
+            cursor: none;
+            position: absolute;
+            top: 57px;
+            right: 0;
+            display: none;
+            
+            span{
+                padding: 7px 0;
+                cursor: pointer;
+                font-size: 13px;
+            }
+        
+        }
+        }
+        
+    }
+  
+}
