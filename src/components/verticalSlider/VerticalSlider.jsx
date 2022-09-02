@@ -5,7 +5,7 @@ import superman from './img/superman.jpg'
 import spiderman from './img/spiderman.jpg'
 import { ArrowBackIosNew, ArrowForwardIos, PlayArrow, Add, ThumbUp, ThumbDown } from '@mui/icons-material'
 import { useRef, useState } from 'react'
-import trailer from '../../videos/vid.mp4'
+// import trailer from '../../videos/vid.mp4'
 
 
 const VerticalSlider = () => {
@@ -70,11 +70,11 @@ const VerticalSlider = () => {
         <div className='moviesWrapper' ref={container} >
           <div className='movie' onMouseLeave={handleOnMouseLeave}>
               <div className='media_wrapper'>
-                { mouseOnVideo &&
+                {/* { mouseOnVideo &&
                  <video autoPlay loop muted> 
                   <source src={trailer} type='video/mp4' />
                 </video>
-                }
+                } */}
                 <img src={movies[0]} alt='movie1' onMouseEnter={handleOnMouseEnter}/>
               </div>
               <div className='showDetails'>
@@ -99,11 +99,11 @@ const VerticalSlider = () => {
             </div>
             <div className='movie' onMouseLeave={handleOnMouseLeave}>
               <div className='media_wrapper'>
-                { mouseOnVideo &&
+                {/* { mouseOnVideo &&
                  <video autoPlay loop muted> 
                   <source src={trailer}  type='video/mp4' />
                 </video>
-                }
+                } */}
                 <img src={movies[1]} alt='movie2' onMouseEnter={handleOnMouseEnter}/>
               </div>
               <div className='showDetails'>
@@ -128,11 +128,11 @@ const VerticalSlider = () => {
             </div>
             <div className='movie' onMouseLeave={handleOnMouseLeave}>
               <div className='media_wrapper'>
-                { mouseOnVideo &&
+                {/* { mouseOnVideo &&
                  <video autoPlay loop muted> 
                   <source src={trailer}  type='video/mp4' />
                 </video>
-                }
+                } */}
                 <img src={movies[2]} alt='movie3' onMouseEnter={handleOnMouseEnter}/>
               </div>
               <div className='showDetails'>
@@ -157,11 +157,11 @@ const VerticalSlider = () => {
             </div>
             <div className='movie' onMouseLeave={handleOnMouseLeave}>
               <div className='media_wrapper'>
-                { mouseOnVideo &&
+                {/* { mouseOnVideo &&
                  <video autoPlay loop muted > 
                   <source src={trailer}  type='video/mp4' />
                 </video>
-                }
+                } */}
                 <img src={movies[0]} alt='movie1' onMouseEnter={handleOnMouseEnter}/>
               </div>
               <div className='showDetails'>
@@ -186,11 +186,11 @@ const VerticalSlider = () => {
             </div>
             <div className='movie' onMouseLeave={handleOnMouseLeave}>
               <div className='media_wrapper'>
-                { mouseOnVideo &&
+                {/* { mouseOnVideo &&
                  <video autoPlay loop muted > 
                   <source src={trailer}  type='video/mp4' />
                 </video>
-                }
+                } */}
                 <img src={movies[1]} alt='movie2' onMouseEnter={handleOnMouseEnter}/>
               </div>
               <div className='showDetails'>
@@ -215,11 +215,11 @@ const VerticalSlider = () => {
             </div>
             <div className='movie' onMouseLeave={handleOnMouseLeave}>
               <div className='media_wrapper'>
-                { mouseOnVideo &&
+                {/* { mouseOnVideo &&
                  <video autoPlay loop muted > 
                   <source src={trailer}  type='video/mp4' />
                 </video>
-                }
+                } */}
                 <img src={movies[2]} alt='movie3' onMouseEnter={handleOnMouseEnter}/>
               </div>
               <div className='showDetails'>
@@ -244,11 +244,11 @@ const VerticalSlider = () => {
             </div>
             <div className='movie' onMouseLeave={handleOnMouseLeave}>
               <div className='media_wrapper'>
-                { mouseOnVideo &&
+                {/* { mouseOnVideo &&
                  <video autoPlay loop muted > 
                   <source src={trailer}  type='video/mp4' />
                 </video>
-                }
+                } */}
                 <img src={movies[0]} alt='movie1' onMouseEnter={handleOnMouseEnter}/>
               </div>
               <div className='showDetails'>
@@ -273,11 +273,11 @@ const VerticalSlider = () => {
             </div>
             <div className='movie' onMouseLeave={handleOnMouseLeave}>
               <div className='media_wrapper'>
-                { mouseOnVideo &&
+                {/* { mouseOnVideo &&
                  <video autoPlay loop muted > 
                   <source src={trailer}  type='video/mp4' />
                 </video>
-                }
+                } */}
                 <img src={movies[1]} alt='movie2' onMouseEnter={handleOnMouseEnter}/>
               </div>
               <div className='showDetails'>
@@ -302,11 +302,11 @@ const VerticalSlider = () => {
             </div>
             <div className='movie' onMouseLeave={handleOnMouseLeave}>
               <div className='media_wrapper'>
-                { mouseOnVideo &&
+                {/* { mouseOnVideo &&
                  <video autoPlay loop muted > 
                   <source src={trailer}  type='video/mp4' />
                 </video>
-                }
+                } */}
                 <img src={movies[2]} alt='movie3' onMouseEnter={handleOnMouseEnter}/>
               </div>
               <div className='showDetails'>
@@ -331,11 +331,11 @@ const VerticalSlider = () => {
             </div>
             <div className='movie' onMouseLeave={handleOnMouseLeave}>
               <div className='media_wrapper'>
-                { mouseOnVideo &&
+                {/* { mouseOnVideo &&
                  <video autoPlay loop muted > 
                   <source src={trailer}  type='video/mp4' />
                 </video>
-                }
+                } */}
                 <img src={movies[0]} alt='movie1' onMouseEnter={handleOnMouseEnter}/>
               </div>
               <div className='showDetails'>
