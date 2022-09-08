@@ -13,9 +13,9 @@ const Home = () => {
       {/* <Prueba /> */}
         <Nav />
         <FrontCover />
-        <VerticalSlider />
-        <VerticalSlider />
-        <VerticalSlider />
+        <VerticalSlider genreName='Action'/>
+        <VerticalSlider genreName='History'/>
+        <VerticalSlider genreName='Animation'/>
         {/* <Watch /> */}
         {/* <Login /> */}
         {/* <Register /> */}
