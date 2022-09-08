@@ -8,7 +8,20 @@ import axios from 'axios'
 
 const VerticalSlider = ({genreName}) => {
 
-    console.log(genreName);
+    const API_KEY = "db1e7d01beeb6014463a48079046b84f";
+    const BASE_URL = "https://api.themoviedb.org/3";
+    const API_URL = BASE_URL+`/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&with_genres=`;
+    const BASE_IMG = "https://image.tmdb.org/t/p/w500/";
+  
+      const [movies, setMovies] = useState(null);
+      useEffect(()=>{
+        axios.get(`${API_URL}${idGenre}`)
+        .then(response=>{
+          setMovies(response.data.results);
+          console.log(response.data.results);
+        })
+      
+      }, [])
 
     const container = useRef();
     const [contador, setContador] = useState(0);
@@ -64,22 +77,7 @@ const VerticalSlider = ({genreName}) => {
       return id;
     }
     const idGenre = getGenreId(genreName);
-  
-    const API_KEY = "db1e7d01beeb6014463a48079046b84f";
-    const BASE_URL = "https://api.themoviedb.org/3";
-    const API_URL = BASE_URL+`/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&with_genres=`;
-    const BASE_IMG = "https://image.tmdb.org/t/p/w500/";
-  
-      const [movies, setMovies] = useState(null);
-      useEffect(()=>{
-        axios.get(`${API_URL}${idGenre}`)
-        .then(response=>{
-          setMovies(response.data.results);
-          console.log(response.data.results);
-          console.log("HOLA");
-        })
-      
-      }, [])
+    
    
 
 
@@ -97,6 +95,8 @@ const VerticalSlider = ({genreName}) => {
           key={pos.id} 
           idKey= {pos.id}
           poster= {`${BASE_IMG}${pos.poster_path}`} 
+          rate = {pos.vote_average}
+          recomendAge = {pos.adult}
           release= {pos.release_date}
           overview = {pos.overview}
           title = {pos.title}

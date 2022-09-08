@@ -24,25 +24,25 @@ const Prueba = () => {
       movies
     )
 
-  // return (
-  //   <>
-  //    {movies ? 
-  //       movies.map(pos=>{
-  //           return(
-  //           <div key={pos.id}>
-  //             <img src={`${BASE_IMG}${pos.poster_path}`} />
-  //             <p>DURACIÓN</p>
-  //             <p>MAS DE 18 TRUE OR FALSE</p>
-  //             <p>{pos.release_date}</p>
-  //             <p>{pos.overview}</p>
-  //             <p>{pos.title} EN LUGAR DE EL GéNERO</p>
-  //           </div>
-  //           );
-  //         }) : 
-  //         <p>Loading data</p>}
-  //   </>
+  return (
+    <>
+     {movies ? 
+        movies.map(pos=>{
+            return(
+            <div key={pos.id}>
+              <img src={`${BASE_IMG}${pos.poster_path}`} />
+              <p>DURACIÓN</p>
+              <p>MAS DE 18 TRUE OR FALSE</p>
+              <p>{pos.release_date}</p>
+              <p>{pos.overview}</p>
+              <p>{pos.title} EN LUGAR DE EL GéNERO</p>
+            </div>
+            );
+          }) : 
+          <p>Loading data</p>}
+    </>
     
-  // )
+  )
 }
 
 export default Prueba

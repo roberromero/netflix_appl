@@ -1,10 +1,14 @@
 import React from 'react'
 import '../verticalSlider/VerticalSlider.scss'
 import { PlayArrow, Add, ThumbUp, ThumbDown } from '@mui/icons-material'
+import StarRateSharpIcon from '@mui/icons-material/StarRateSharp';
 import {  useState } from 'react'
 
 
-const Card = ({idKey, poster, release, overview, title }) => {
+const Card = ({idKey, poster, rate, recomendAge, release, overview, title }) => {
+
+  //To show only the year of release
+  let releaseSlice = release.slice(0,4);
 
  //FUNCTIONS TO CONTROL VIDEOS ON AND OFF WHEN MOUSE ENTERS AND LEAVES
  const [mouseOnVideo, setMouseOnVideo] = useState(false);
@@ -15,7 +19,10 @@ const Card = ({idKey, poster, release, overview, title }) => {
  const handleOnMouseLeave= ()=> {
    setMouseOnVideo(false);
  }
+ 
 
+
+ 
 
   return (
     
@@ -32,9 +39,10 @@ const Card = ({idKey, poster, release, overview, title }) => {
                           <ThumbDown className='icons'/>
                         </div>
                         <div className='specif_wrapper pad_top'>
-                          <span>DURACION</span>
-                          <span>+18 o -18</span>
-                          <span>{release}</span>
+                          <StarRateSharpIcon className='icons star_size'/>
+                          <span className='rate'>{rate}</span>
+                          <span className='squared'> { recomendAge ? " +18 " : " under 18 " }</span>
+                          <span>{releaseSlice}</span>
                         </div>
                         <h3 className='pad_top'>{overview}</h3>
                         <span className=' genre pad_top'>{title}</span>
