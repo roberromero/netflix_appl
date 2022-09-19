@@ -7,22 +7,25 @@ import Footer from '../../components/footer/Footer';
 // import Watch from '../Watch/Watch';
 // import Login from '../Login/Login';
 // import Register from '../Register/Register'; 
+import { DataProvider } from '../../context/DataContext';
 
 const Home = () => {
   return (
     <div className='home'>
-      {/* <Prueba /> */}
-        <Nav />
-        <FrontCover />
-        <VerticalSlider genreName='Action'/>
-        <VerticalSlider genreName='History'/>
-        <VerticalSlider genreName='Animation'/>
-        <VerticalSlider genreName='Mystery'/>
-        <VerticalSlider genreName='Music'/>
-        <Footer />
-        {/* <Watch /> */}
-        {/* <Login /> */}
-        {/* <Register /> */}
+        <DataProvider>
+            {/* <Prueba /> */}
+          <Nav />
+          <FrontCover />
+          <VerticalSlider genreName='Action'/>
+          <VerticalSlider genreName='History'/>
+          <VerticalSlider genreName='Animation'/>
+          <VerticalSlider genreName='Mystery'/>
+          <VerticalSlider genreName='Music'/>
+          <Footer />
+          {/* <Watch /> */}
+          {/* <Login /> */}
+          {/* <Register /> */}
+        </DataProvider>
     </div>
   )
 }

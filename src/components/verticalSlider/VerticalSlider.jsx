@@ -4,7 +4,8 @@ import { ArrowBackIosNew, ArrowForwardIos } from '@mui/icons-material'
 import { useRef, useState, useEffect } from 'react'
 import Card from '../card/Card'
 import axios from 'axios'
-
+import { useContext } from 'react'///////////////////////////////////////////////////////////////////
+import DataContext from '../../context/DataContext'//////////////////////////////////////////////////
 
 const VerticalSlider = ({genreName}) => {
 
@@ -18,7 +19,7 @@ const VerticalSlider = ({genreName}) => {
         axios.get(`${API_URL}${idGenre}`)
         .then(response=>{
           setMovies(response.data.results);
-          // console.log(response.data.results);
+          console.log(response.data.results);
         })
       
       }, [])
@@ -80,11 +81,13 @@ const VerticalSlider = ({genreName}) => {
     
    
 
-
+    const saludo = useContext(DataContext);//////////////////////////////////////////////////////////
 
   return (
     <div className='verticalSlider'>
-        <p>{genreName}</p>
+      
+        <p>{genreName}</p><br /><p>{saludo.saludo[saludo.num]}</p>
+        
         <ArrowBackIosNew className='movieButton movieButton_left' onClick={()=>handleClick("left")} ref={buttonArrLeft}/>
         <div className='moviesWrapper' ref={container} >
       
