@@ -21,36 +21,31 @@ const Card = ({idKey, poster, rate, recomendAge, release, overview, title }) => 
  }
  
 
-
- 
-
   return (
-    
-            
-                    <div className='movie' onMouseLeave={handleOnMouseLeave} key={idKey}>
-                      <div className="movie_h">
-                        <div className='media_wrapper'>
-                          <img src={poster} alt='movie1' onMouseEnter={handleOnMouseEnter}/>
-                        </div>
-                        <div className='showDetails'>
-                          <div className='icons_wrapper pad_top'>
-                            <PlayArrow className='icons'/>
-                            <Add className='icons'/>
-                            <ThumbUp className='icons'/>
-                            <ThumbDown className='icons'/>
-                          </div>
-                          <div className='specif_wrapper pad_top'>
-                            <StarRateSharpIcon className='icons star_size'/>
-                            <span className='rate'>{rate}</span>
-                            <span className='squared'> { recomendAge ? " +18 " : " under 18 " }</span>
-                            <span>{releaseSlice}</span>
-                          </div>
-                          <h3 className='pad_top'>{overview}</h3>
-                          <span className=' genre pad_top'>{title}</span>
-                        </div>
-                      </div>
-                    </div>
-              );
+        <div className='movie' onMouseLeave={handleOnMouseLeave} key={idKey}>
+          <div className='movie_h'>
+          <div className='media_wrapper'>
+            <img src={poster} alt='movie1' onMouseEnter={handleOnMouseEnter}/>
+          </div>
+          <div className='showDetails'>
+            <div className='icons_wrapper pad_top'>
+              <PlayArrow className='icons'/>
+              <Add className='icons'/>
+              <ThumbUp className='icons'/>
+              <ThumbDown className='icons'/>
+            </div>
+            <div className='specif_wrapper pad_top'>
+              <StarRateSharpIcon className='icons'/>
+              <span className='rate'>{rate}</span>
+              <span className='squared'> { recomendAge ? " +18 " : " under 18 " }</span>
+              <span>{releaseSlice}</span>
+            </div>
+            <h3 className='pad_top'>{overview}</h3>
+            <span className=' genre pad_top'>{title}</span>
+          </div>
+          </div>
+        </div>
+        );
           
 }
 

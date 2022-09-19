@@ -18,7 +18,7 @@ const VerticalSlider = ({genreName}) => {
         axios.get(`${API_URL}${idGenre}`)
         .then(response=>{
           setMovies(response.data.results);
-          console.log(response.data.results);
+          // console.log(response.data.results);
         })
       
       }, [])
@@ -92,15 +92,15 @@ const VerticalSlider = ({genreName}) => {
           movies ? movies.map(pos=>{
           return(
             <Card
-          key={pos.id} 
-          idKey= {pos.id}
-          poster= {`${BASE_IMG}${pos.poster_path}`} 
-          rate = {pos.vote_average}
-          recomendAge = {pos.adult}
-          release= {pos.release_date}
-          overview = {pos.overview}
-          title = {pos.title}
-          />
+              key={pos.id} 
+              idKey= {pos.id}
+              poster= {`${BASE_IMG}${pos.poster_path}`} 
+              rate = {pos.vote_average}
+              recomendAge = {pos.adult}
+              release= {pos.release_date}
+              overview = {pos.overview}
+              title = {pos.title}
+            />
           );
         }) : 
         <div>Loading data</div>

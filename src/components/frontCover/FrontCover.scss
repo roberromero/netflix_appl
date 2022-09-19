@@ -1,5 +1,5 @@
 .frontCover{
-        background-image: url(./img/Hulk_cover.jpg);
+        // background-image: url(./img/Hulk_cover.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         height: 90vh;
@@ -14,6 +14,11 @@
                 position: absolute;
                 top: 150px;
                 left: 50px;
+                
+        }
+        .frontCover_title{
+                font-weight: 700;
+                font-size: 45px;
         }
         .frontCover_elem{
                 padding: 7px 0;
