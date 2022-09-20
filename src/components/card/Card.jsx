@@ -20,7 +20,6 @@ const Card = ({idKey, poster, rate, recomendAge, release, overview, title }) => 
    setMouseOnVideo(false);
  }
  
-
   return (
         <div className='movie' onMouseLeave={handleOnMouseLeave} key={idKey}>
           <div className='movie_h'>
