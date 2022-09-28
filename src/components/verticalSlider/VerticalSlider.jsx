@@ -11,19 +11,18 @@ const VerticalSlider = ({genreName}) => {
 
     const API_KEY = "db1e7d01beeb6014463a48079046b84f";
     const BASE_URL = "https://api.themoviedb.org/3";
-    const API_URL = BASE_URL+`/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&with_genres=`;
     const BASE_IMG = "https://image.tmdb.org/t/p/w500/";
-  
+    const API_URL = BASE_URL+`/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&with_genres=`;
+
       const [movies, setMovies] = useState(null);
       useEffect(()=>{
-        axios.get(`${API_URL}${idGenre}`)
+        axios.get(`${API_URL}${idGenreMovie}`)
         .then(response=>{
           setMovies(response.data.results);
-          console.log(response.data.results);
         })
       
       }, [])
-
+    
     const container = useRef();
     const [contador, setContador] = useState(0);
     const buttonArrLeft = useRef(); 
@@ -62,7 +61,7 @@ const VerticalSlider = ({genreName}) => {
           }
        
     }
-    //Function to get ID from the name
+      //Function that returns movies's ID from name served as atribute of <VerticalSlider />
     const getGenreId = (name) => {
       const genres= [{"id":28,"name":"Action"},{"id":12,"name":"Adventure"},{"id":16,"name":"Animation"},
       {"id":35,"name":"Comedy"},{"id":80,"name":"Crime"},{"id":99,"name":"Documentary"},{"id":18,"name":"Drama"},
@@ -77,9 +76,23 @@ const VerticalSlider = ({genreName}) => {
       })
       return id;
     }
-    const idGenre = getGenreId(genreName);
-    
-   
+    //Function that returns series's ID from name served as atribute of <VerticalSlider />
+    const getGenreIdTv = (name) => {
+      const genres =  [{ "id": 10759, "name": "Action & Adventure"},{"id": 16,"name": "Animation"},{"id": 35,"name": "Comedy"},
+      {"id": 80,"name": "Crime"},{"id": 99,"name": "Documentary"},{"id": 18,"name": "Drama"},{"id": 10751,"name": "Family"},
+      {"id": 10762,"name": "Kids"},{"id": 9648,"name": "Mystery"},{"id": 10763,"name": "News"},{"id": 10764,"name": "Reality"},
+      {"id": 10765, "name": "Sci-Fi & Fantasy"},{"id": 10766,"name": "Soap"},{"id": 10767,"name": "Talk"},{"id": 10768,"name": "War & Politics"},
+      {"id": 37,"name": "Western"}];
+      let id = 0;
+      genres.forEach(pos=>{
+        if(name===pos.name){
+          id = pos.id;
+        }
+      })
+      return id;
+    }
+
+    const idGenreMovie = getGenreId(genreName);
 
     const saludo = useContext(DataContext);//////////////////////////////////////////////////////////
 

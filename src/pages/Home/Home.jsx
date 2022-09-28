@@ -18,8 +18,6 @@ const Home = () => {
           <VerticalSlider genreName='Action'/>
           <VerticalSlider genreName='History'/>
           <VerticalSlider genreName='Animation'/>
-          <VerticalSlider genreName='Mystery'/>
-          <VerticalSlider genreName='Music'/>
           <Footer />
         </DataProvider>
     </div>

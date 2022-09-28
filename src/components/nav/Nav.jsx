@@ -12,17 +12,23 @@ const Nav = () => {
     setMoveScroll(window.pageYOffset=== 0 ? false : true);
     return ()=> window.onscroll = false; //Clean up function otherwise it will continue runing creating a loop
   }
+
+  const [currentPage, setCurrentPage] = useState("Homepage");
+  const setPage = (clickPage)=> {
+    setCurrentPage(clickPage);
+  }
   
   return (
     <nav className={moveScroll ? 'moveScroll' : null}>
         <div className='left'>
           <img src={net_logo} alt="Netflix"/>
           <ul>
-            <NavLink to="/"><li>Homepage</li></NavLink>
-            <NavLink to="/"><li>Series</li></NavLink>
-            <NavLink to="/"><li>Movies</li></NavLink>
-            <NavLink to="/"><li>New and Popular</li></NavLink>
-            <NavLink to="/"><li>My List</li></NavLink>  
+            <NavLink to="/" onClick={()=>setPage("Homepage")}><li>Homepage</li></NavLink>
+            <NavLink to="/" onClick={()=>setPage("Series")}><li>Series</li></NavLink>
+            <NavLink to="/" onClick={()=>setPage("Movies")}><li>Movies</li></NavLink>
+            <NavLink to="/" onClick={()=>setPage("NewAndPopular")}><li>New and Popular</li></NavLink>
+            <NavLink to="/" onClick={()=>setPage("MyList")}><li>My List</li></NavLink>  
+            <NavLink to="/"><li>{`This is current page: ${currentPage}`}</li></NavLink>
           </ul>  
         </div>
         <div className='right'>
