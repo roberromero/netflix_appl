@@ -3,6 +3,7 @@ import './Nav.scss'
 import { Search,Notifications, ArrowDropDown } from '@mui/icons-material'
 import net_logo from './img/net_logo.svg'
 import prof_photo from './img/prof_photo.png'
+import { NavLink } from 'react-router-dom'
 const Nav = () => {
 
   const [moveScroll, setMoveScroll] = useState(false);
@@ -17,11 +18,11 @@ const Nav = () => {
         <div className='left'>
           <img src={net_logo} alt="Netflix"/>
           <ul>
-            <li>Homepage</li>
-            <li>Series</li>
-            <li>Movies</li>
-            <li>New and Popular</li>
-            <li>My List</li>  
+            <NavLink to="/"><li>Homepage</li></NavLink>
+            <NavLink to="/"><li>Series</li></NavLink>
+            <NavLink to="/"><li>Movies</li></NavLink>
+            <NavLink to="/"><li>New and Popular</li></NavLink>
+            <NavLink to="/"><li>My List</li></NavLink>  
           </ul>  
         </div>
         <div className='right'>

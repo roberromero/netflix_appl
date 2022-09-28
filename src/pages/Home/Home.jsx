@@ -13,7 +13,6 @@ const Home = () => {
   return (
     <div className='home'>
         <DataProvider>
-            {/* <Prueba /> */}
           <Nav />
           <FrontCover />
           <VerticalSlider genreName='Action'/>
@@ -22,9 +21,6 @@ const Home = () => {
           <VerticalSlider genreName='Mystery'/>
           <VerticalSlider genreName='Music'/>
           <Footer />
-          {/* <Watch /> */}
-          {/* <Login /> */}
-          {/* <Register /> */}
         </DataProvider>
     </div>
   )

@@ -46,14 +46,14 @@ const VerticalSlider = ({genreName}) => {
           let positionX = container.current.getBoundingClientRect().x;
 
           if( direc === "left" && contador > 0 ){
-            positionX = positionX + 265;
+            positionX = positionX + 182;
             setContador(contador - 1);
             displayNone(buttonArrLeft);
             cursorNone();
             movePos();
           }
-          if ( direc === "right" && contador < 6 ) {
-            positionX = positionX - 275;
+          if ( direc === "right" && contador < 10 ) {
+            positionX = positionX - 192;
             setContador(contador + 1);
             displayNone(buttonArrRight);
             cursorNone();
@@ -86,7 +86,7 @@ const VerticalSlider = ({genreName}) => {
   return (
     <div className='verticalSlider'>
       
-        <p>{genreName}</p><br /><p>{saludo.saludo[saludo.num]}</p>
+        <p>{genreName}</p>
         
         <ArrowBackIosNew className='movieButton movieButton_left' onClick={()=>handleClick("left")} ref={buttonArrLeft}/>
         <div className='moviesWrapper' ref={container} >
