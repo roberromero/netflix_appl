@@ -5,11 +5,10 @@ export const DataContext = createContext();
 export const DataProvider = ({children}) => {
 
 
-    const [saludo, setSaludo] = useState(["hola", "hello", "bonyua", "salaMoalicum"]);
-    const [num, setNum] = useState(0);
-
+    
+    const [currentPage, setCurrentPage] = useState("Homepage");
     return(
-        <DataContext.Provider value={{ saludo, setSaludo, num, setNum}}>
+        <DataContext.Provider value={{ currentPage, setCurrentPage}}>
             {children}
         </DataContext.Provider>
     );

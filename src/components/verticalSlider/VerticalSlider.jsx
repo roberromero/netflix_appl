@@ -4,10 +4,13 @@ import { ArrowBackIosNew, ArrowForwardIos } from '@mui/icons-material'
 import { useRef, useState, useEffect } from 'react'
 import Card from '../card/Card'
 import axios from 'axios'
-import { useContext } from 'react'///////////////////////////////////////////////////////////////////
-import DataContext from '../../context/DataContext'//////////////////////////////////////////////////
+import { useContext } from 'react'
+import DataContext from '../../context/DataContext'
 
 const VerticalSlider = ({genreName}) => {
+
+    const currentPage = useContext(DataContext);
+
 
     const API_KEY = "db1e7d01beeb6014463a48079046b84f";
     const BASE_URL = "https://api.themoviedb.org/3";
@@ -94,12 +97,12 @@ const VerticalSlider = ({genreName}) => {
 
     const idGenreMovie = getGenreId(genreName);
 
-    const saludo = useContext(DataContext);//////////////////////////////////////////////////////////
 
   return (
     <div className='verticalSlider'>
       
-        <p>{genreName}</p>
+        <p>{genreName}{currentPage.currentPage}</p>
+        
         
         <ArrowBackIosNew className='movieButton movieButton_left' onClick={()=>handleClick("left")} ref={buttonArrLeft}/>
         <div className='moviesWrapper' ref={container} >

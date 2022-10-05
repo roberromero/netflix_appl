@@ -4,18 +4,22 @@ import { Search,Notifications, ArrowDropDown } from '@mui/icons-material'
 import net_logo from './img/net_logo.svg'
 import prof_photo from './img/prof_photo.png'
 import { NavLink } from 'react-router-dom'
+import { useContext } from 'react'
+import DataContext from '../../context/DataContext'
+
 const Nav = () => {
 
   const [moveScroll, setMoveScroll] = useState(false);
+  const currentPage = useContext(DataContext);
 
   window.onscroll = ()=> {
     setMoveScroll(window.pageYOffset=== 0 ? false : true);
     return ()=> window.onscroll = false; //Clean up function otherwise it will continue runing creating a loop
   }
 
-  const [currentPage, setCurrentPage] = useState("Homepage");
+  
   const setPage = (clickPage)=> {
-    setCurrentPage(clickPage);
+    currentPage.setCurrentPage(clickPage);
   }
   
   return (

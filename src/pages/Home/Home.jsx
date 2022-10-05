@@ -10,6 +10,8 @@ import Footer from '../../components/footer/Footer';
 import { DataProvider } from '../../context/DataContext';
 
 const Home = () => {
+
+  
   return (
     <div className='home'>
         <DataProvider>
